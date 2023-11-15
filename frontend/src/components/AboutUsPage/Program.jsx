@@ -43,7 +43,7 @@ export default function Program() {
                       width: "150px",
                     }}
                   >
-                    B. Tech.
+                    B.Tech.
                   </Typography>
                 </div>
               </Grid>
@@ -72,7 +72,7 @@ export default function Program() {
                     color={"white"}
                     sx={{ width: "150px" }}
                   >
-                    M. Tech.
+                    M.Tech.
                   </Typography>
                 </div>
               </Grid>
@@ -105,7 +105,7 @@ export default function Program() {
                     color={"white"}
                     sx={{ width: "150px" }}
                   >
-                    M. S.
+                    M.S.
                   </Typography>
                 </div>
               </Grid>
@@ -137,7 +137,7 @@ export default function Program() {
                     color={"white"}
                     sx={{ width: "150px" }}
                   >
-                    Ph. D.
+                    Ph.D.
                   </Typography>
                 </div>
               </Grid>

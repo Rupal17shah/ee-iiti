@@ -12,7 +12,7 @@ export const btech = {
 export const faculty = {
   title: "Faculty Members",
   description:
-    "The Department currently has 19 faculty members who's expertise falls under five main areas : Communications and Signal Processing (CSP), VLSI and Nano electronic devices (VDN), Power Electronics and Power Systems (PEPS), RF and Microwave, and Controls and Instrumentation.",
+    "The Department currently has 19 faculty members whose expertise falls under five main areas: Communications and Signal Processing (CSP), VLSI and Nanoelectronic devices (VDN), Power Electronics and Power Systems (PEPS), RF and Microwave, and Controls and Instrumentation.",
   image: "/Images/header_images/faculty.JPG",
   };
 
