@@ -13,14 +13,14 @@ const NoteFromHOD = () => {
         }}
       >
         <Grid container alignItems="center" justifyContent="center" spacing={2}>
-          <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
+          {/* <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
             <img
               className="note-img"
               src="/Images/people/vivek.png"
               alt=""
               width="200"
             />
-          </Grid>
+          </Grid> */}
           <Grid item xs={12} sm={6} md={9} lg={9} xl={9} sx={{ mb: 3, px: 4 }}>
             <Typography
               variant="h1"
