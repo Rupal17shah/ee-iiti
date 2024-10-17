@@ -18,6 +18,7 @@ import { api } from "../Api"
 import axios from "axios"
 import CountUp from "react-countup"
 import VisibilitySensor from "react-visibility-sensor"
+import PieChartComponent from "../components/PieChartComponent"
 import SchoolIcon from "@mui/icons-material/School"
 
 export default function StatsPage() {
@@ -124,7 +125,7 @@ export default function StatsPage() {
               title="Statistics"
             />
             <center>
-              <img alt="not_found" width="50%" src="/Images/patentss.png" />
+             <PieChartComponent/>
               
             </center>
             <Typography textAlign="center" fontWeight="bold" variant="h1">
