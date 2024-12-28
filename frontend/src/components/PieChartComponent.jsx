@@ -21,7 +21,7 @@ const PieChartComponent = () => {
                 x={x}
                 y={y}
                 fill="white"
-                fontSize={29} // Increased font size for label
+                fontSize={18}
                 textAnchor="middle"
                 dominantBaseline="central"
             >
@@ -36,53 +36,62 @@ const PieChartComponent = () => {
         <Box
             sx={{
                 display: 'flex',
-                flexDirection: 'column', // Column layout to stack the pie chart and total text
+                flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                height: '80vh', // Adjust height as needed
-                pb: 7,
+                overflow: 'hidden', 
             }}
         >
-            {/* Pie Chart and Legend container */}
+            {/* Pie Chart and Legend */}
             <Box
                 sx={{
                     display: 'flex',
-                    flexDirection: 'row', // Align pie chart and legend horizontally
+                    flexDirection: 'row',
                     alignItems: 'center',
                     justifyContent: 'center',
                     width: '100%',
+                    flexWrap: 'wrap', 
+                    overflow: 'hidden', 
                 }}
             >
-                {/* Pie Chart */}
-                <ResponsiveContainer width="50%" height={400}>
-                    <PieChart>
-                        <Pie
-                            data={data}
-                            cx="50%"
-                            cy="50%"
-                            labelLine={false}
-                            label={renderCustomizedLabel} // Custom label rendering
-                            outerRadius={150}
-                            dataKey="value"
-                        >
-                            {data.map((entry, index) => (
-                                <Cell
-                                    key={`cell-${index}`}
-                                    fill={COLORS[index % COLORS.length]}
-                                />
-                            ))}
-                        </Pie>
-                        <Tooltip />
-                    </PieChart>
-                </ResponsiveContainer>
+                <Box
+                    sx={{
+                        width: '100%', 
+                        minWidth: 300, 
+                        maxWidth: 600,
+                    }}
+                >
+                    <ResponsiveContainer width="100%" height={350}>
+                        <PieChart>
+                            <Pie
+                                data={data}
+                                cx="50%"
+                                cy="50%"
+                                labelLine={false}
+                                label={renderCustomizedLabel}
+                                outerRadius={130}
+                                dataKey="value"
+                            >
+                                {data.map((entry, index) => (
+                                    <Cell
+                                        key={`cell-${index}`}
+                                        fill={COLORS[index % COLORS.length]}
+                                    />
+                                ))}
+                            </Pie>
+                            <Tooltip />
+                        </PieChart>
+                    </ResponsiveContainer>
+                </Box>
 
-                {/* Legend with Dots */}
+                {/* Legend */}
                 <Box
                     sx={{
                         display: 'flex',
                         flexDirection: 'column',
-                        ml: -4,
-                        mt: -11, // Add space between pie chart and legend
+                        alignItems: 'flex-start',
+                        justifyContent: 'center',
+                        mt: 2,
                     }}
                 >
                     {data.map((entry, index) => (
@@ -91,10 +100,9 @@ const PieChartComponent = () => {
                             sx={{
                                 display: 'flex',
                                 alignItems: 'center',
-                                mb: 2, // Margin between legend items
+                                mb: 1,
                             }}
                         >
-                            {/* Color Dot */}
                             <Box
                                 sx={{
                                     width: 16,
@@ -104,7 +112,7 @@ const PieChartComponent = () => {
                                     mr: 1,
                                 }}
                             />
-                            <Typography variant="body1" sx={{ fontSize: '20px' }}>
+                            <Typography variant="body1" sx={{ fontSize: '16px' }}>
                                 {entry.name}
                             </Typography>
                         </Box>
@@ -112,7 +120,17 @@ const PieChartComponent = () => {
                 </Box>
             </Box>
 
-            <Typography variant="h6" sx={{ mr: 10, fontWeight: 'bold', color: '#1A2D5E', fontSize: '27px' }}>
+            {/* Total */}
+            <Typography
+                variant="h6"
+                sx={{
+                    paddingTop: '15px',
+                    mb: '30px',
+                    fontWeight: 'bold',
+                    color: '#1A2D5E',
+                    fontSize: '22px',
+                }}
+            >
                 Total: <span style={{ color: '#1976d2' }}>{total}</span> and counting...
             </Typography>
         </Box>
