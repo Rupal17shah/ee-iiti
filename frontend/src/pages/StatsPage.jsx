@@ -125,7 +125,7 @@ export default function StatsPage() {
               title="Statistics"
             />
             <center>
-             <PieChartComponent/>
+            <img alt="not_found" width="50%" src="/Images/patenttss.png" />
               
             </center>
             <Typography textAlign="center" fontWeight="bold" variant="h1">

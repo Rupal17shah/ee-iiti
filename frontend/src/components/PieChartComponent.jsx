@@ -110,6 +110,7 @@ const PieChartComponent = () => {
                                     backgroundColor: COLORS[index % COLORS.length],
                                     borderRadius: '50%',
                                     mr: 1,
+                                    ml : 4,
                                 }}
                             />
                             <Typography variant="body1" sx={{ fontSize: '16px' }}>
